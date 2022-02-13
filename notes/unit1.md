@@ -26,6 +26,8 @@ in Java Networking:
 1. Connection-Oriented and Connection-less Protocol. 
 1. Socket. 
 
+---
+
 1. **What is an IP Address?**
 
 An IP Address is a 32-bit unique address which is assigned to each node in a network. It is expressed in terms of
@@ -61,19 +63,26 @@ have multiple **NIC** but each with unique MAC address.
 **For Example:** `00:0d:83::b1:c0:8e`
 
 5. **Difference Between Connection-Oriented and Connection-Less
-	 Protocol**
-	 
+  Protocol:**
+  
 * **Connection Oriented Protocol:** 
+
 In connection-oriented protocol, acknowledgement is sent
 by the receiver. So it is reliable but slow. 
 
 **For Example:** TCP which uses Three way handshake. 
 
 * **Connection Less Protocol:**
+
 In connection-less protocol, acknowledgement is not
 sent by the receiver. So it is not reliable but fast. 
 
 **For Example:** UDP is a connection-less protocol. 
+
+6. **Socket:**
+
+A socket is an endpoint between two way communication and it is a
+combination of IP Address, Port number, and protocol. 
 
 ## Protocols: 
 
@@ -83,17 +92,42 @@ Protocols are set of rules used to establish a communication medium between diff
 
 The `java.net` package supports two protocols:
 
-* **TCP:** TCP stands for transmission control protocol which is a
-	connection-oriented protocol. TCP provides us a very reliable
-	connection between the sender & the receiver. TCP is used
-	along with the Internet Protocol and is referred as TCP/IP. 
+* **TCP:** 
+
+TCP stands for **Transmission Control Protocol** which is a
+ connection-oriented protocol. TCP provides us a very reliable
+ connection between the sender & the receiver. TCP is used
+ along with the Internet Protocol and is referred as TCP/IP. 
 
 ![tcp-threeway-handshake](../resources/Three-Way-Handshake.png "tcp-threeway-handshake")
 
 
+* **UDP:** 
 
-* **UDP:** UDP stands for user datagram protocol which is a
-	connection-less protocol. In UDP, the packets of data are allowed
-	are transferred along with the help of two or more nodes. 
+UDP stands for **User Datagram Protocol** which is a connection-less
+protocol. In UDP, the packets of data are allowed are transferred 
+along with the help of two or more nodes. 
+UDP works on the model of request and response. 
+
+![udp-request-and-response](../resources/udp-request-and-response.png "udp-request-and-response.png")
+
+## Java Socket Programming: 
+
+Java socket programming is used for communication between the
+applications running on different JRE (Java Runtime
+Environment). 
+
+The classes used to perform socket programming are as follows: 
+
+| PROTOCOL  | CLASS NAMES                   |
+|-----------|-------------------------------|
+| TCP       | Socket, ServerSocket          |
+| UDP       | DatagramSocket, DatagramPacket|
+
+**NOTE:** All of the above classes reside within the `java.net` package. 
+
+**Java Socket API:**
+
+![Java Socket API](../resources/Java-Socket-API.png "Java-Socket-API")
 
 
